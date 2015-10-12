@@ -1,0 +1,179 @@
+<div style="font-family: Helvetica, Arial, sans-serif; font-size: 13px">
+<p>Dans cet épisode, le TARDIS (la machine à voyager dans le temps du&nbsp;<em>Docteur Who</em>) se matérialise en l'an 4798 sur la Ood-Sphere, une planète habitée par les <a href="http://en.wikipedia.org/wiki/Ood" style="color: #222244" target="cgwiki">Oods</a>, une civilisation étrange mais néanmoins très avancée.</p>
+
+<p>Les Oods ne sont pas particulièrement agréables à regarder : des tentacules disgracieux leur pendent au bas du visage. Bien qu'ils soient monstrueux, les Oods sont des créatures très sensibles qui n'ont pas la notion d'individualité. Ils pensent qu'ils ne forment qu'un tout unique et communiquent entre eux par télépathie.</p>
+
+<div style="text-align: center"><img src="fileservlet?id=862478360113"></div>
+
+<p>En réalité, le Docteur atterrit au beau milieu d'une cérémonie Oodienne. L'un des Oods ayant atteint l'âge de la maturité, le reste de la communauté souhaite lui offrir un magnifique cadeau. Seulement, tous ont un budget différent à investir dans ce cadeau, et bien sûr, leur unique souhait est de parvenir à <strong>déterminer le partage qui soit le plus équitable possible tout en restant dans les limites des budgets de chacun</strong>. Les Oods réfléchissent à la méthode optimale depuis des jours et n'ont toujours pas réussi à s'accorder sur une solution satisfaisante.</p>
+
+<p>Le Docteur décide donc de leur donner un coup de main en créant un programme. Son idée est de s'assurer que les Oods ont assez d'argent pour acheter le cadeau et si oui, de déterminer&nbsp;la somme dont chaque Ood devra s'acquitter dans la limite de son budget. De plus pour faciliter les comptes, le Docteur souhaite que la participation de chacun soit un nombre entier de la monnaie locale (personne ne doit donner de centimes).&nbsp;</p>
+
+<p>Le Docteur a en main la&nbsp;liste des&nbsp;budgets maximum&nbsp;de chaque Ood.</p>
+
+<p><span style="line-height: 1.6em;">Pour respecter les aspirations démocratiques des Oods et pour départager les différentes solutions, le Docteur décide que :</span></p>
+
+<ul>
+	<li><span style="line-height: 1.6em;">aucun Ood ne peut mettre plus que son budget maximal</span></li>
+	<li><strong><span style="line-height: 1.6em;">la solution optimale est celle pour laquelle la plus grande contribution est minimale</span></strong></li>
+	<li><span style="line-height: 1.6em;">s'il y a plusieurs solutions optimales, on prend la solution pour laquelle la deuxième plus grande&nbsp;contribution d'un participant est minimale et ainsi de suite...</span></li>
+</ul>
+
+<div style="clear:both;text-align: center;">&nbsp;</div>
+<span style="line-height: 1.6em;">Par exemple on souhaite&nbsp;acheter un cadeau qui coute 100.&nbsp;Le premier Ood dispose d'un budget de 3, le deuxième d'un budget de 45 et le troisième d'un budget de 100.<br>
+Dans ce cas:</span>
+
+<table style="width: 300px;" cellpadding="1" cellspacing="1" align="center" border="1">
+	<thead>
+		<tr>
+			<th scope="col">Budget</th>
+			<th scope="col">Solution</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">3</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;">45</td>
+			<td style="text-align: center;">45</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;">100</td>
+			<td style="text-align: center;">52</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+<span style="font-family: Helvetica, Arial, sans-serif;">Maintenant on souhaite toujours acheter un cadeau qui coute 100 mais le deuxième Ood dispose cette fois d'un budget de 100.</span><br>
+<span style="font-family: Helvetica, Arial, sans-serif;">Dans ce cas:</span>
+
+<table style="width: 300px;" cellpadding="1" cellspacing="1" align="center" border="1">
+	<thead>
+		<tr>
+			<th scope="col">Budget</th>
+			<th scope="col">Solution</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="text-align: center;">3</td>
+			<td style="text-align: center;">3</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;">100</td>
+			<td style="text-align: center;">48</td>
+		</tr>
+		<tr>
+			<td style="text-align: center;">100</td>
+			<td style="text-align: center;">49</td>
+		</tr>
+	</tbody>
+</table>
+&nbsp;
+
+<div style="clear:both;text-align: center;">
+<hr style="width:160px;margin: 10px auto;"></div>
+
+<p><b style="font-size: 12px">ENTRÉE :</b><br>
+<b>Ligne 1 :</b>&nbsp;le nombre <b>N</b> de Oods participant au cadeau<br>
+<b>Ligne 2 :</b>&nbsp;le prix <b>C</b> du cadeau<br>
+<b>N Lignes suivantes :</b>&nbsp;la liste des budgets <strong>B</strong> des participants.</p>
+
+<p><b style="font-size: 12px">SORTIE :</b></p>
+
+<ul>
+	<li>Si il est possible d'acheter le cadeau : N lignes&nbsp;contenant chacune&nbsp;la&nbsp;contribution&nbsp;d'un&nbsp;participant. Les lignes sont triées par ordre croissant.</li>
+	<li>Sinon le mot <code>IMPOSSIBLE</code>.</li>
+</ul>
+<b style="font-size: 12px">CONTRAINTES :</b>
+
+<div style="font-family: monospace">0 &lt; N ≤ 2000<br>
+0 ≤ C ≤ 1000000000<br>
+0 ≤ B ≤ 1000000000</div>
+<br>
+<b style="font-size: 12px">EXEMPLES :</b>
+
+<div style="border: 1px solid black; width: 440px; background-color: #DDDDDD;">
+<div style="float: left; margin-left: 10px; padding-left: 10px; width: 200px; font-family: monospace;">
+<div><b>Entrée</b></div>
+
+<div>3</div>
+
+<div>100</div>
+
+<div>20</div>
+
+<div>20</div>
+
+<div>40</div>
+</div>
+
+<div style="margin-left: 10px; float: left; padding-left: 5px; width: 200px; font-family: monospace;">
+<div><b>Sortie</b></div>
+
+<div>IMPOSSIBLE</div>
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+</div>
+&nbsp;
+
+<div style="border: 1px solid black; width: 440px; background-color: #DDDDDD;">
+<div style="float: left; margin-left: 10px; padding-left: 10px; width: 200px; font-family: monospace;">
+<div><b>Entrée</b></div>
+
+<div>3</div>
+
+<div>100</div>
+
+<div>40</div>
+
+<div>40</div>
+
+<div>40</div>
+</div>
+
+<div style="margin-left: 10px; float: left; padding-left: 5px; width: 200px; font-family: monospace;">
+<div><b>Sortie</b></div>
+
+<div>33</div>
+
+<div>33</div>
+
+<div><span style="font-family: monospace; background-color: rgb(221, 221, 221);">34</span></div>
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+</div>
+&nbsp;
+
+<div style="border: 1px solid black; width: 440px; background-color: #DDDDDD;">
+<div style="float: left; margin-left: 10px; padding-left: 10px; width: 200px; font-family: monospace;">
+<div><b>Entrée</b></div>
+
+<div>3</div>
+
+<div>100</div>
+
+<div>100</div>
+
+<div>1</div>
+
+<div>60</div>
+</div>
+
+<div style="margin-left: 10px; float: left; padding-left: 5px; width: 200px; font-family: monospace;">
+<div><b>Sortie</b></div>
+
+<div>1</div>
+
+<div><span style="font-family: monospace; background-color: rgb(221, 221, 221);">49</span></div>
+
+<div>50</div>
+</div>
+
+<div style="clear: both;">&nbsp;</div>
+</div>
+</div>
